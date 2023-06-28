@@ -10,4 +10,4 @@ class Dog:
 # Driver code & instantiation
 midnight_the_husky = Dog("Midnight")
 
-print(f"Midnight is a {midnight_the_husky.attribute}")
+print(f"{midnight_the_husky.name} is a {midnight_the_husky.attribute}")
