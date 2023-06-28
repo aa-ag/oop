@@ -6,8 +6,11 @@ class Dog:
     def __init__(self, name):
         self.name = name
 
+    def speak(self):
+        print("My name is {}".format(self.name))
+
 
 # Driver code & instantiation
 midnight_the_husky = Dog("Midnight")
 
-print(f"{midnight_the_husky.name} is a {midnight_the_husky.attribute}")
+midnight_the_husky.speak()
