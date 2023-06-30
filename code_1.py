@@ -1,33 +1,20 @@
-class Bird:
-
-    def intro(self):
-        print("There are many types of birds.")
-
-    def flight(self):
-        print("Most of the birds can fly but some cannot.")
+class Number(object):
+    def __init__(self, n):
+        self.n = n
 
 
-class sparrow(Bird):
+class First(Number):
+    def __init__(self, n, as_string):
+        self.as_string = as_string
 
-    def flight(self):
-        print("Sparrows can fly.")
+        Number.__init__(self, n)
+
+    def print_details(self):
+        print("First number inherited: {} {}".format(
+            self.n, self.as_string
+        ))
 
 
-class ostrich(Bird):
-
-    def flight(self):
-        print("Ostriches cannot fly.")
-
-
-obj_bird = Bird()
-obj_spr = sparrow()
-obj_ost = ostrich()
-
-obj_bird.intro()
-obj_bird.flight()
-
-obj_spr.intro()
-obj_spr.flight()
-
-obj_ost.intro()
-obj_ost.flight()
+if __name__ == "__main__":
+    a_number = First(1, "One")
+    a_number.print_details()
