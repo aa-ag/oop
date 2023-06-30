@@ -9,12 +9,23 @@ class First(Number):
 
         Number.__init__(self, n)
 
-    def print_details(self):
-        print("First number inherited: {} {}".format(
-            self.n, self.as_string
-        ))
+    def is_true(self):
+        return False
+
+
+class Second(Number):
+    def __init__(self, n, as_string):
+        self.as_string = as_string
+
+        Number.__init__(self, n)
+
+    def is_true(self):
+        return True
 
 
 if __name__ == "__main__":
     a_number = First(1, "One")
-    a_number.print_details()
+    print(a_number.is_true())
+
+    another_number = Second(2, "Two")
+    print(another_number.is_true())
