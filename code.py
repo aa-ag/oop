@@ -1,16 +1,11 @@
-class Dog:
-    # class attribute
-    attribute = "mammal"
+class Person(object):
+    def __init__(self, firstname, lastname):
+        self.firstname = firstname
+        self.lastname = lastname
 
-    # instance attribute
-    def __init__(self, name):
-        self.name = name
-
-    def speak(self):
-        print("My name is {}".format(self.name))
+    def print_self_details(self):
+        print("My name is {} {}".format(self.firstname, self.lastname))
 
 
-# Driver code & instantiation
-midnight_the_husky = Dog("Midnight")
-
-midnight_the_husky.speak()
+john = Person("John", "Doe")
+print(john.firstname, john.lastname)
