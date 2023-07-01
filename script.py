@@ -1,16 +1,21 @@
 class Base:
     def __init__(self):
-        self.a = "GeeksforGeeks"
-        self.__c = "GeeksforGeeks"
+        self._a = 2
 
 
 class Derived(Base):
     def __init__(self):
         Base.__init__(self)
-        print("Calling private member of base class: ")
-        print(self.__c)
+        print(self._a)
+
+        self._a = 3
+        print(self._a)
 
 
-obj1 = Base()
-print(obj1.a)
-print(obj1.c)  # 'Base' object has no attribute 'c'
+obj1 = Derived()
+
+obj2 = Base()
+
+print(obj1._a)
+
+print(obj2._a)
