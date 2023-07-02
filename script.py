@@ -1,21 +1,12 @@
-class Base:
-    def __init__(self):
-        self._a = 2
+class MyClass:
+    __hidden_variable = 0
+
+    def add(self, increment):
+        self.__hidden_variable += increment
+        print(self.__hidden_variable)
 
 
-class Derived(Base):
-    def __init__(self):
-        Base.__init__(self)
-        print(self._a)
-
-        self._a = 3
-        print(self._a)
-
-
-obj1 = Derived()
-
-obj2 = Base()
-
-print(obj1._a)
-
-print(obj2._a)
+myObject = MyClass()
+myObject.add(2)
+myObject.add(5)
+print(myObject.__hidden_variable)
